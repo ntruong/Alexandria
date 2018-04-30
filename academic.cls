@@ -3,7 +3,11 @@
 
 \LoadClass[twocolumn]{article}
 
-\RequirePackage[left=2.5cm, right=2.5cm, top=2.5cm]{geometry}
+% Allow for extra whitespace at the ends of pages
+\raggedbottom
+
+% Smaller margins
+\RequirePackage[margin=2.5cm]{geometry}
 
 % Creates centered article title bounded by lines with an author block
 \renewcommand{\maketitle}{
