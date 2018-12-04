@@ -16,7 +16,7 @@
 \makeatletter
 \def\ps@homework{%
   \def\@oddfoot{%
-    $\overline{\makebox[\textwidth]{\@course\hfill\@footnotetext\hfill\thepage}}$%
+    $\overline{\makebox[\textwidth]{\@course\hfill\thepage}}$%
   }%
   \let\@evenfoot\@oddfoot%
   \def\@oddhead{%
