@@ -31,11 +31,16 @@
 % Title page header for class information.
 \makeatletter
 \renewcommand{\maketitle}{%
-  \begin{tabular}{ll}
-    \textbf{Name:}       & \@author \\
-    \textbf{Instructor:} & \@instructor \\
-    \textbf{Date:}       & \@date
-  \end{tabular}
+  % \thispagestyle{titlehomework}%
+  \noindent%
+  \fboxsep=6pt%
+  \fbox{%
+    \begin{tabular}{@{}ll@{}}
+      \textbf{Name:}       & \@author \\
+      \textbf{Instructor:} & \@instructor \\
+      \textbf{Date:}       & \@date \\[-3pt]
+    \end{tabular}%
+  }
   \bigbreak
   {\centering\huge\scshape \@title\par}
   \bigbreak
