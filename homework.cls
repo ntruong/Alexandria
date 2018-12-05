@@ -13,7 +13,6 @@
 \newcommand{\instructor}[1]{\def\@instructor{#1}}
 
 % Custom header and footer.
-\makeatletter
 \def\ps@homework{%
   \def\@oddfoot{%
     $\overline{\makebox[\textwidth]{\@course\hfill\thepage}}$%
@@ -25,11 +24,9 @@
   }%
   \let\@mkboth\markboth%
 }
-\makeatother
 \pagestyle{homework}
 
 % Title page header for class information.
-\makeatletter
 \renewcommand{\maketitle}{%
   % \thispagestyle{titlehomework}%
   \noindent%
@@ -45,7 +42,6 @@
   {\centering\huge\scshape \@title\par}
   \bigbreak
 }
-\makeatother
 
 % Make title by default.
 \AtBeginDocument{\maketitle}
