@@ -19,8 +19,10 @@
   }%
   \let\@evenfoot\@oddfoot%
   \def\@oddhead{%
-    \textsc{\@title}\hfill\textit{\@author}%
-    \aftergroup\hrule%
+    \begin{minipage}{\textwidth}%
+      \textsc{\@title}\hfill\textit{\@author}%
+      \hrule%
+    \end{minipage}%
   }%
   \let\@mkboth\markboth%
 }
