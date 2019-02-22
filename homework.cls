@@ -23,7 +23,6 @@
 
 % Title page header for class information.
 \renewcommand{\maketitle}{%
-  % \thispagestyle{titlehomework}%
   \noindent%
   \fboxsep=6pt%
   \fbox{%
