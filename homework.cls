@@ -14,16 +14,9 @@
 
 % Custom header and footer.
 \def\ps@homework{%
-  \def\@oddfoot{%
-    $\overline{\makebox[\textwidth]{\@course\hfill\thepage}}$%
-  }%
+  \def\@oddfoot{\@course\hfill\thepage}%
   \let\@evenfoot\@oddfoot%
-  \def\@oddhead{%
-    \begin{minipage}{\textwidth}%
-      \textsc{\@title}\hfill\textit{\@author}%
-      \hrule%
-    \end{minipage}%
-  }%
+  \def\@oddhead{\textsc{\@title}\hfill\textit{\@author}}%
   \let\@mkboth\markboth%
 }
 \pagestyle{homework}
