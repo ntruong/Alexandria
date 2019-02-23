@@ -1,0 +1,20 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{math}[6666/66/66 Common math needs.]
+
+\RequirePackage{amsmath, amssymb, amsfonts, amsthm}
+
+% Math environments.
+\newtheorem{defn}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+% Autosized delimiters.
+\newcommand{\br}[1]{\left[#1\right]}
+\newcommand{\p}[1]{\left(#1\right)}
+
+% Commands for common number sets.
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
