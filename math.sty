@@ -7,6 +7,15 @@
 \newtheorem{defn}{Definition}[section]
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+\newenvironment{solution}
+  { \let\oldqedsymbol\qedsymbol%
+    \renewcommand{\qedsymbol}{$\blacktriangleleft$}%
+    \begin{proof}[Solution]
+  }
+  { \end{proof}%
+    \renewcommand{\qedsymbol}{\oldqedsymbol}%
+  }
 
 % Autosized delimiters.
 \newcommand{\br}[1]{\left[#1\right]}
