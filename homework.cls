@@ -39,8 +39,3 @@
 
 % Make title by default.
 \AtBeginDocument{\maketitle}
-
-% Custom problem declaration.
-\newcommand{\problem}[1]{%
-  \medbreak\noindent\textbf{{\large #1}}\smallbreak%
-}
