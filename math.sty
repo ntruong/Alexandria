@@ -17,13 +17,30 @@
     \renewcommand{\qedsymbol}{\oldqedsymbol}%
   }
 
-% Autosized delimiters.
-\newcommand{\br}[1]{\left[#1\right]}
-\newcommand{\p}[1]{\left(#1\right)}
+% Redefine \left and \right to remove the surrounding extra space.
+\let\ogleft\left
+\let\ogright\right
+\def\left{\mathopen{}\mathclose\bgroup\ogleft}
+\def\right{\aftergroup\egroup\ogright}
+
+% Autosized delimeters.
+\def\s#1{\left\{#1\right\}}
+\def\p(#1){\left(#1\right)}
+\def\b[#1]{\left[#1\right]}
 
 % Commands for common number sets.
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+
+% Probability stuff.
+\newcommand{\E}[2][]{\mathbb{E}_{#1}\p(#2)}
+\renewcommand{\P}[2][]{\mathbb{P}_{#1}\p(#2)}
+\def\cov(#1){\operatorname{Cov}\p(#1)}
+\def\var(#1){\operatorname{Var}\p(#1)}
+
+% Other common functions.
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+\newcommand{\argmax}{\operatorname*{arg\,max}}
