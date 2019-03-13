@@ -24,9 +24,9 @@
 \def\right{\aftergroup\egroup\ogright}
 
 % Autosized delimeters.
-\def\s#1{\left\{#1\right\}}
-\def\p(#1){\left(#1\right)}
-\def\b[#1]{\left[#1\right]}
+\newcommand{\s}[1]{\left\{#1\right\}}
+\newcommand{\p}[1]{\left(#1\right)}
+\renewcommand{\b}[1]{\left[#1\right]}
 
 % Commands for common number sets.
 \def\C{\mathbb{C}}
@@ -36,11 +36,12 @@
 \def\Z{\mathbb{Z}}
 
 % Probability stuff.
-\newcommand{\E}[2][]{\mathbb{E}_{#1}\p(#2)}
-\renewcommand{\P}[2][]{\mathbb{P}_{#1}\p(#2)}
-\def\cov(#1){\operatorname{Cov}\p(#1)}
-\def\var(#1){\operatorname{Var}\p(#1)}
+\newcommand{\E}[2][]{\mathbb{E}_{#1}\p{#2}}
+\renewcommand{\P}[2][]{\mathbb{P}_{#1}\p{#2}}
+\newcommand{\cov}[1]{\operatorname{Cov}\p{#1}}
+\newcommand{\var}[1]{\operatorname{Var}\p{#1}}
 
 % Other common functions.
 \newcommand{\argmin}{\operatorname*{arg\,min}}
 \newcommand{\argmax}{\operatorname*{arg\,max}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
