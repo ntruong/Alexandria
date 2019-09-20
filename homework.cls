@@ -13,29 +13,36 @@
 \newcommand{\instructor}[1]{\def\@instructor{#1}}
 
 % Custom header and footer.
+\makeatletter
 \def\ps@homework{%
-  \def\@oddfoot{\@course\hfill\thepage}%
+  \def\@oddfoot{%
+    $\overline{\makebox[\textwidth]{\@course\hfill\thepage}}$%
+  }%
   \let\@evenfoot\@oddfoot%
-  \def\@oddhead{\textsc{\@title}\hfill\textit{\@author}}%
+  \def\@oddhead{%
+    \textsc{\@title}\hfill\textit{\@author}%
+    \aftergroup\hrule%
+  }%
   \let\@mkboth\markboth%
 }
+\makeatother
 \pagestyle{homework}
 
 % Title page header for class information.
+\makeatletter
 \renewcommand{\maketitle}{%
-  \noindent%
-  \fboxsep=6pt%
-  \fbox{%
-    \begin{tabular}{@{}ll@{}}
-      \textbf{Name:}       & \@author \\
-      \textbf{Instructor:} & \@instructor \\
-      \textbf{Date:}       & \@date \\[-3pt]
-    \end{tabular}%
-  }
+  \begin{tabular}{ll}
+    \textbf{Name:}       & \@author \\
+    \textbf{Instructor:} & \@instructor \\
+    \textbf{Date:}       & \@date
+  \end{tabular}
   \bigbreak
   {\centering\huge\scshape \@title\par}
   \bigbreak
 }
+\makeatother
 
-% Make title by default.
-\AtBeginDocument{\maketitle}
+% Custom problem declaration, with labeling for reference.
+\newcommand{\problem}[1]{%
+  \medbreak\noindent\textbf{{\large #1}}\smallbreak%
+}
