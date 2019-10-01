@@ -21,7 +21,7 @@
   \let\@evenfoot\@oddfoot%
   \def\@oddhead{%
     \textsc{\@title}\hfill\textit{\@author}%
-    \aftergroup\hrule%
+    \aftergroup\hrulefill%
   }%
   \let\@mkboth\markboth%
 }
@@ -41,8 +41,3 @@
   \bigbreak
 }
 \makeatother
-
-% Custom problem declaration, with labeling for reference.
-\newcommand{\problem}[1]{%
-  \medbreak\noindent\textbf{{\large #1}}\smallbreak%
-}
