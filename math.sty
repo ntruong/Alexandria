@@ -24,9 +24,9 @@
 \def\right{\aftergroup\egroup\ogright}
 
 % Autosized delimeters.
-\newcommand{\s}[1]{{\left\{#1\right\}}}
-\newcommand{\p}[1]{{\left(#1\right)}}
-\renewcommand{\b}[1]{{\left[#1\right]}}
+\newcommand{\s}[1]{\left\{#1\right\}}
+\newcommand{\p}[1]{\left(#1\right)}
+\renewcommand{\b}[1]{\left[#1\right]}
 
 % Commands for common number sets.
 \def\C{\mathbb{C}}
@@ -41,6 +41,7 @@
 \renewcommand{\P}[2][]{\mathbb{P}_{#1}\b{#2}}
 \newcommand{\cov}[1]{\operatorname{Cov}\b{#1}}
 \newcommand{\var}[1]{\operatorname{Var}\b{#1}}
+\newcommand{\id}{\operatorname{id}}
 
 % Other common functions.
 \newcommand{\argmin}{\operatorname*{arg\,min}}
