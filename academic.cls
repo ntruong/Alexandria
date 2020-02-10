@@ -5,7 +5,12 @@
 
 %%% Required packages.
 \RequirePackage[margin=2.5cm]{geometry}
-\RequirePackage[colorlinks=true]{hyperref}
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  citecolor=red,
+  linkcolor=red
+}
 
 % Creates centered article title bounded by lines with an author block
 \renewcommand{\maketitle}{
