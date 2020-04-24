@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{academic}[6666/66/66 Academic Articles]
 
-\LoadClass[twocolumn]{article}
+\LoadClass[12pt]{article}
 
 %%% Required packages.
 \RequirePackage[margin=2.5cm]{geometry}
@@ -14,22 +14,18 @@
 
 % Creates centered article title bounded by lines with an author block
 \renewcommand{\maketitle}{
-  \twocolumn[
-    \centering
-    \rule{\textwidth}{2pt}
-    {\Huge
-     \bf
-     \@title
-     \par}
-    \rule{\textwidth}{2pt}
-    \medskip
+  {\centering
+   \Huge
+   \@title
+   \par}
+  \bigskip
 
-    {\begin{tabular}[t]{c}
-     \@author
-     \end{tabular}
-     \par}
-    \bigskip
-  ]
+  {\centering
+   \begin{tabular}[t]{c}
+   \@author
+   \end{tabular}
+   \par}
+  \bigskip
 }
 
 % Small, centered abstract with narrower width
