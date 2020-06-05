@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{math}[6666/66/66 Common math needs.]
 
-\RequirePackage{amsmath, amssymb, amsfonts, amsthm}
+\RequirePackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
 
 % Math environments.
 \newtheorem{defn}{Definition}[section]
@@ -25,9 +25,9 @@
 \def\right{\aftergroup\egroup\ogright}
 
 % Autosized delimeters.
-\newcommand{\s}[1]{\left\{#1\right\}}
-\newcommand{\p}[1]{\left(#1\right)}
-\renewcommand{\b}[1]{\left[#1\right]}
+\DeclarePairedDelimiter{\s}{\{}{\}}
+\DeclarePairedDelimiter{\p}{(}{)}
+\DeclarePairedDelimiter{\br}{[}{]}
 
 % Commands for common number sets.
 \def\C{\mathbb{C}}
@@ -41,11 +41,16 @@
 \def\d{\mathrm{d}}
 
 % Probability stuff.
-\newcommand{\E}[2][]{\mathbb{E}_{#1}\b{#2}}
-\renewcommand{\P}[2][]{\mathbb{P}_{#1}\b{#2}}
-\newcommand{\cov}[1]{\operatorname{Cov}\b{#1}}
-\newcommand{\var}[1]{\operatorname{Var}\b{#1}}
+\newcommand{\E}{\mathbb{E}\br}
+\renewcommand{\P}{\mathbb{P}\p}
+\newcommand{\cov}{\operatorname{Cov}\br}
+\newcommand{\var}{\operatorname{Var}\br}
 \newcommand{\id}{\operatorname{id}}
+\newcommand{\iid}{i.i.d.}
+
+\makeatletter
+\newcommand{\given}{\,\@ifstar{\middle|}{\mid}\,}
+\makeatother
 
 % Other common functions.
 \newcommand{\argmin}{\operatorname*{arg\,min}}
